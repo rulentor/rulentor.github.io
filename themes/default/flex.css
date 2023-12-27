@@ -1,8 +1,7 @@
-!@layer primevue {
+@layer primevue {
   * {
     box-sizing: border-box;
   }
-};
 .bg-white {
   background-color: #fff !important;
 }
@@ -118,4 +117,5 @@ h3 {
     padding: 1rem;
     width: 100%;
   }
+}
 }
