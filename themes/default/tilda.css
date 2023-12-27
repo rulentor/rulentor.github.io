@@ -1,3 +1,4 @@
+@layer primevue {
 .bg-surface {
   background-image: url(https://thumb.tildacdn.com/tild6364-3236-4139-b166-303362616535/-/format/webp/snapedit_17029904935.png);
   background-color: #fff;
@@ -101,7 +102,6 @@
   border-style: solid;
   border-width: 10px 8px 0 8px;
   border-color: #000 transparent transparent transparent;
-    border-top-color: rgb(0, 0, 0);
   border-top-color: #1c1a18;
   position: absolute;
   right: 20px;
@@ -109,4 +109,6 @@
   bottom: 0;
   margin: auto;
   pointer-events: none;
+}
+svg{display: none !important;}
 }
