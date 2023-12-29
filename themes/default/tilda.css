@@ -1,58 +1,115 @@
 @layer primevue {
-.bg-surface {
-  background-image: url(https://thumb.tildacdn.com/tild6364-3236-4139-b166-303362616535/-/format/webp/snapedit_17029904935.png);
-  background-color: #fff;
+.bg-surface{
+  background-image: url("https://thumb.tildacdn.com/tild3432-3434-4336-a565-643336353636/-/format/webp/Group_1501_1.png");
+  background-color: #ffffff;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   border-color: transparent;
   border-style: solid;
 }
-.bg-black {
-  background-color: #1c1a18;
-}
-.bg-white {
-  background-color: #fffffe;
-}
-.text-white.border, .bg-flow .text-black {
-  border: transparent;
-}
-
-.tn-atom {
-  min-height: 2.5rem;
-  line-height: 3.5rem;
+.bg-flow .card, .bg-surface .card{
+  border-width: 2px;
   border-radius: 40px;
   background-position: center center;
+  border-color: #ededed;
   border-style: solid;
 }
-.text-white {
-  color: #fffffe !important;
+.bg-black{
   background-color: #1c1a18;
 }
-.text-black {
+.bg-white{
+  background-color: #fffffe;
+}
+.bg-orange{
+  border: transparent;
+  background-color: #ff8023;
+}
+.bg-flow{
+  background-color: transparent;
+}
+.text-black{
   color: #1c1a18 !important;
   background-color: #fffffe;
 }
-.bg-black .field > .border {
+.text-white{
+  color: #fffffe !important;
+  background-color: #1c1a18;
+}
+.bg-flow .text-black{
+  color: #1c1a18 !important;
+  background-color: #fffffe;
+}
+.bg-surface .text-black.border{
+  background-color: #ff8023;
+}
+
+.text-white.border, .bg-flow .text-black, .bg-white .text-black, .bg-surface .text-black{
+  border: transparent;
+}
+.bg-black .field > .border{
   border: 2px solid transparent;
   background-color: #fffffe;
   transition: background-color 0.2s, color 0.2s, border-color 0s, box-shadow 0s !important;
 }
-.tn-elem, [data-shape="field"] {
-  height: 3.5rem;
-  line-height: 2rem !important;
+.bg-flow .field > .border{
+  border: 2px solid rgb(255, 128, 35);
+  background-color: #fffffe;
 }
-.p-component {
+.bg-surface .field > .border{
+  border2: 2px solid rgb(255, 128, 35);
+  background-color2: #ff8023 !important;
+}
+.p-component{
   display: inline-flex;
   cursor: pointer;
   position: relative;
   user-select: none;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-feature-settings: var(--font-feature-settings, normal);
   font-size: 1rem;
-  font-weight: normal;
+  font-weight: normal;	
 }
+.p-dropdown{
+  height: 4.5rem;
+  line-height: 3rem; 
+  background: #ffffff;
+  border: 1px solid #000 !important;
+  transition: background-color 0.2s, color 0.2s, border-color 0s, box-shadow 0s !important;
+  border-radius: 40px !important;
+  cursor: pointer;
+}
+.tn-elem, [data-shape="field"]{
+  height: 4.5rem;
+  line-height: 3rem !important;
+}
+.p-dropdown-panel{
+  background: transparent !important;
+  margin: 1px auto;
+  box-shadow: 0 0 0 0 transparent !important;  
+}
+.p-dropdown:not(.p-disabled).p-focus{
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0 !important;
+}
+.p-component .p-dropdown-items-wrapper{
+  width: 100%;
+  background-color: #fff;
+  margin: 1px 5% 0 5%;
+  border: 1px solid #000 !important;  
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;
+}
+.bg-white .p-dropdown-panel .p-dropdown-items-wrapper{
+  background-color: #ff8023 !important;
+}
+.p-component .p-dropdown-items{
 
-.p-inputtext {
+}
+.p-inputtext{
   margin: 0;
   color: #495057;
   background: #ffffff;
@@ -63,9 +120,9 @@
   border-radius: 6px;
   font-feature-settings: var(--font-feature-settings, normal);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1rem;
+  font-size: 1rem;  
 }
-.p-dropdown-label {
+.p-dropdown-label{
   display: block;
   white-space: nowrap;
   overflow: hidden;
@@ -74,28 +131,28 @@
   text-overflow: ellipsis;
   cursor: pointer;
 }
-.p-dropdown .p-dropdown-label {
-  background: transparent;
-  border: 0 none;
-}
-.p-dropdown .p-dropdown-label.p-placeholder {
-  color: #6c757d;
-}
-.p-dropdown-trigger {
+.p-dropdown-trigger{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
-.p-dropdown .p-dropdown-trigger {
+.p-dropdown .p-dropdown-label{
+  background: transparent;
+  border: 0 none;
+}
+.p-dropdown .p-dropdown-label.p-placeholder{
+  color: #6c757d;
+}
+.p-dropdown .p-dropdown-trigger{
   background: transparent;
   color: #6c757d;
   width: 3rem;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
-  font-size: 2rem;
+  font-size: 2rem;  
 }
-.p-dropdown .p-dropdown-trigger::after {
+.p-dropdown .p-dropdown-trigger::after{
   content: ' ';
   width: 0;
   height: 0;
@@ -108,7 +165,43 @@
   top: 0;
   bottom: 0;
   margin: auto;
-  pointer-events: none;
+  pointer-events: none;  	
+}
+.p-icon{
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+}
+.tn-atom{
+  min-height: 2.5rem;
+  line-height: 3.5rem;  
+  border-radius: 40px;
+  background-position: center center;
+  border-style: solid;
+}
+
+
+.t-input-group{
+  max-width: 50%;
+}
+h1.tn-atom{
+  font-size: 55px;
+  font-family: 'inter',Arial,sans-serif;
+  font-weight: 500;
+}
+.text-normal.tn-atom, .text-20.tn-atom{
+  font-size: 26px;
+  font-family: 'inter',Arial,sans-serif;
+  font-weight: 400;
+}
+.text-normal.tn-atom{
+  line-height: 30px;
 }
 svg{display: none !important;}
+/*hover*/
+  .p-dropdown-panel .p-dropdown-items .p-dropdown-item:not(.p-highlight):not(.p-disabled),
+  .p-dropdown-panel .p-dropdown-items .p-dropdown-item:not(.p-highlight):not(.p-disabled):hover {
+    color: #4b5563;
+    background: transparent !important;
+  }
 }
