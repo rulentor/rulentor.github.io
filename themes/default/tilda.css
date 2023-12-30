@@ -71,8 +71,8 @@
   font-weight: normal;	
 }
 .p-dropdown{
-  height: 3.5rem;
-  line-height: 2rem; 
+  height: 4.5rem;
+  line-height: 3rem; 
   background: #ffffff;
   border: 1px solid #000 !important;
   transition: background-color 0.2s, color 0.2s, border-color 0s, box-shadow 0s !important;
@@ -80,8 +80,8 @@
   cursor: pointer;
 }
 .tn-elem, [data-shape="field"]{
-  height: 3.5rem;
-  line-height: 2rem !important;
+  height: 4.5rem;
+  line-height: 3rem !important;
 }
 .p-dropdown-panel{
   background: transparent !important;
@@ -179,21 +179,20 @@
   background-position: center center;
   border-style: solid;
 }
+
 .t-input-group{
   max-width: 50%;
 }
 h1.tn-atom{
-  font-size: 40px;
   font-family: 'inter',Arial,sans-serif;
   font-weight: 500;
 }
 .text-normal.tn-atom, .text-20.tn-atom{
-  font-size: 20px;
   font-family: 'inter',Arial,sans-serif;
   font-weight: 400;
 }
 .text-normal.tn-atom{
-  line-height: 20px;
+  line-height: 30px;
 }
 svg{display: none !important;}
 /*hover*/
@@ -202,4 +201,24 @@ svg{display: none !important;}
     color: #4b5563;
     background: transparent !important;
   }
+
+@media screen and (max-width: 739px) {
+.p-dropdown{
+  height: 3.5rem;
+  line-height: 2rem; 
+}
+.tn-elem, [data-shape="field"]{
+  height: 3.5rem;
+  line-height: 2rem !important;
+}
+h1.tn-atom{
+  line-height: 35px;
+}
+.text-normal.tn-atom{
+  line-height: 22px;
+}
+}
+@media screen and (min-width: 1200px) {
+
+}
 }
